@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Business directory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\n\tonOpen: async () => {\n\t\tif(appsmith.mode != \"EDIT\") {showModal('API_setup_modal')}\n\t},\n\t\n\t\topenSetup: async () => {\n\t\tif(appsmith.mode == \"EDIT\") {showModal('API_setup_modal')}\n\t},\n\t\n\tstoreAPIkey: async () => {\n\t\tawait storeValue('api_key', User_API_key.text);\n\t\tstoreValue('api_key',User_API_key.text);\n\t\tshowAlert('API key saved! You can now close the Modal')\n\t\treturn(appsmith.store.api_key)\n\t},\n\t\n\tfacebook: () => {\n\t\tclearbit_api.data.company.facebook.handle === null ? showAlert(\"API cannot locate the organization's Facebook handle\") : navigateTo('https://www.facebook.com/' + clearbit_api.data.company.facebook.handle, {},'NEW_WINDOW')\n\t},\n\t\n\t\tlinkedin: () => {\n\t\tclearbit_api.data.company.linkedin.handle === null ? showAlert(\"API cannot locate the organization's LinkedIn handle\") : navigateTo('https://www.linkedin.com/company/' + clearbit_api.data.company.linkedin.handle, {},'NEW_WINDOW')\n},\n\t\t\ttwitter: () => {\n\t\tclearbit_api.data.company.twitter.handle === null ? showAlert(\"API cannot locate the organization's Twitter handle\") : navigateTo('https://twitter.com/' + clearbit_api.data.company.twitter.handle, {},'NEW_WINDOW')\n},\n}",
+    "variables": []
+  },
+  "id": "Business directory_JSObject1",
+  "deleted": false,
+  "gitSyncId": "62b091bc40b36d1624787efd_62b1474140b36d162478ae69"
+}
