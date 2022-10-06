@@ -3,6 +3,10 @@
     {
       "id": "Business directory",
       "isDefault": true
+    },
+    {
+      "id": "Investor details",
+      "isDefault": false
     }
   ],
   "viewMode": false,

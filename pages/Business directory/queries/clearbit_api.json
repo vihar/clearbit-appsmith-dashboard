@@ -52,10 +52,10 @@
         "key": "path"
       },
       {
-        "key": "headers[0].value"
+        "key": "queryParameters[0].value"
       },
       {
-        "key": "queryParameters[0].value"
+        "key": "headers[0].value"
       }
     ],
     "isValid": true,
